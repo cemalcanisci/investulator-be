@@ -8,12 +8,14 @@
 
 **Son güncelleyen:** Codex — **Tarih:** 2026-10-09
 
-### Git kurulumu (2026-10-09)
+### Git kurulumu ve geçici test politikası (2026-10-09)
 
-Git deposu dev branch ile oluşturuldu; origin git@github.com:cemalcanisci/investulator-be.git. Kullanıcı şimdilik public push yapılmasını onayladı; private dönüşümünü daha sonra kendisi yapacak. İlk commit ve push hazırlanıyor. Ortam dosyaları, anahtarlar ve üretilen çıktılar Git dışında. Uygulama kodu değişmedi; backend testleri bu Git kurulumunda yeniden çalıştırılmadı.
+Git deposu dev branch ile oluşturuldu; origin git@github.com:cemalcanisci/investulator-be.git. Kullanıcı şimdilik public push yapılmasını onayladı; private dönüşümünü daha sonra kendisi yapacak. GitHub dev aktarımı bu oturumun kapsamındadır. Ortam dosyaları, anahtarlar ve üretilen çıktılar Git dışında. Uygulama kodu değişmedi; backend testleri bu Git kurulumunda yeniden çalıştırılmadı.
 
 
 Genel inceleme kapsamında mevcut güvenlik yapılandırması, kullanıcı entity/repository'si ve uygulama ayarları okundu. **Backend çalışma kodu değiştirilmedi, backend testleri çalıştırılmadı.** Yalnızca iskelet var; Keycloak, varlık kataloğu, işlem CRUD, kur/fiyat ve portföy hesapları henüz uygulanmadı.
+
+Kullanıcı kararı: commit/push ve her özellik sonrası otomatik test çalıştırma kapalı; toplu kontrol proje sonunda. JaCoCo kapsam kapısı coverage.check.skip=true; proje sonunda false yapılacak.
 
 ### Sırada
 
@@ -36,3 +38,5 @@ _Yeni satırlar en alta eklenir; var olan satırlar değiştirilmez._
 - **2026-10-02 — Codex:** Genel incelemede backend iskeleti okundu; çalışma kodu değiştirilmedi. Frontend düzeltmelerinden backend'e taşınacak işlem sırası, hassasiyet, nakitsiz işlem ve net temettü kuralları devam notlarına eklendi.
 
 - **2026-10-09 — Codex:** dev branch ve GitHub origin kuruldu; ilk aktarım hazırlandı. Kullanıcı public repo kullanımını şimdilik onayladı.
+
+- **2026-10-09 — Codex:** Kullanıcı kararıyla otomatik test çalıştırma ertelendi; JaCoCo kapsam kapısı geçici kapatıldı.

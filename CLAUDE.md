@@ -99,3 +99,7 @@ Repo: git@github.com:cemalcanisci/investulator-be.git; çalışma branch: dev. K
 ## İleride (yol haritasında, şimdi yapma)
 
 Dockerfile ve docker-compose, Jenkins pipeline'ı, SonarQube (kendi kuracağız; `sonar-maven-plugin` + JaCoCo XML raporu ile beslenecek), Jackson 3 ile BigDecimal→string serileştirme, `ProblemDetail` advice'ı.
+
+## Geçici test politikası (2026-10-09 kullanıcı kararı)
+
+Commit/push ve her yeni özellik sonunda otomatik test çalıştırılmaz; toplu test kontrolü proje sonunda yapılacak. Testler ve elle çalıştırma komutları korunur. Backend JaCoCo kapsam kapısı coverage.check.skip=true ile geçici kapalıdır. Proje sonunda bu değer false yapılacak; tek seferlik kontrol: mvn verify -Dcoverage.check.skip=false. mvn test/verify elle çağrılırsa testler çalışmaya devam eder. Bu geçici karar, yukarıdaki her özellik sonrası test çalıştırma kurallarının önüne geçer.
